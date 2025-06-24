@@ -7,7 +7,7 @@ public class ThreadComm extends Thread{
         synchronized (this) {
             System.out.println("Child thread start cal..");
             for (int i=1; i <=100; i++) {
-                sum = sum+1;
+                sum = sum+i;
             }
             this.notify();
             System.out.println("Child thread giving notification");
