@@ -9,13 +9,14 @@ public class ListIteratorDemo {
     public static void main(String[] args) {
         List<String> data = new ArrayList<>(Arrays.asList("Raushan","java","Rahul"));
         ListIterator<String> it = data.listIterator();
-        // listIterator only fetch list string element
+        // listIterator only fetch list element
 
         System.out.println("Forward direction");
         while (it.hasNext()) {
             System.out.println(it.next());
         }
 
+        //when are you traversing on list with help of iterator many times,you can use element again
         System.out.println("Backward direction");
         while (it.hasPrevious()) {
             System.out.println(it.previous());
