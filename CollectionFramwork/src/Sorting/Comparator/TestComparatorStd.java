@@ -1,7 +1,5 @@
 package Sorting.Comparator;
 
-import Sorting.Comparable.Student;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
