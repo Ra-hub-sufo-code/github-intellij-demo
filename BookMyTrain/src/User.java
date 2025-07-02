@@ -1,10 +1,10 @@
 public class User {
     private String userName;
     private String password;
-    private int contact;
+    private String contact;
     private String fullName;
 
-    public User(String userName, String password, int contact, String fullName) {
+    public User(String userName, String password, String contact, String fullName) {
         this.userName = userName;
         this.password = password;
         this.contact = contact;
@@ -27,11 +27,11 @@ public class User {
         this.password = password;
     }
 
-    public int getContact() {
+    public String getContact() {
         return contact;
     }
 
-    public void setContact(int contact) {
+    public void setContact(String contact) {
         this.contact = contact;
     }
 

@@ -3,16 +3,16 @@ public class Train {
     private String name;
     private String source;
     private String destination;
-    private int totalTickets;
+    private int totalSeates;
     private int availableSeats;
 
-    public Train(int trainId, String name, String source, String destination, int totalTickets) {
+    public Train(int trainId, String name, String source, String destination, int totalSeates) {
         this.trainId = trainId;
         this.name = name;
         this.source = source;
         this.destination = destination;
-        this.totalTickets = totalTickets;
-        this.availableSeats = totalTickets;
+        this.totalSeates = totalSeates;
+        this.availableSeats = totalSeates;
     }
 
     public int getTrainId() {
@@ -48,11 +48,11 @@ public class Train {
     }
 
     public int getTotalTickets() {
-        return totalTickets;
+        return totalSeates;
     }
 
-    public void setTotalTickets(int totalTickets) {
-        this.totalTickets = totalTickets;
+    public void setTotalTickets(int totalSeates) {
+        this.totalSeates = totalSeates;
     }
 
     public int getAvailableSeats() {
