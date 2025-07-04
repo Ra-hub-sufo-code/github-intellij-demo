@@ -1,11 +1,14 @@
 public class Member {
     private String memberName;
-    private String memberId;
+    private String memberFullName;
+    private int memberId;
+    private int counter=1001;
     private String contact;
 
-    public Member(String memberName, String memberId, String contact) {
+    public Member(String memberName,String contact,String memberFullName) {
+        this.memberFullName=memberFullName;
+        this.memberId=counter++;
         this.memberName = memberName;
-        this.memberId = memberId;
         this.contact = contact;
     }
 
@@ -19,12 +22,16 @@ public class Member {
         this.memberName = memberName;
     }
 
-    public String getMemberId() {
-        return memberId;
+    public String getMemberFullName() {
+        return memberFullName;
     }
 
-    public void setMemberId(String memberId) {
-        this.memberId = memberId;
+    public void setMemberFullName(String memberFullName) {
+        this.memberFullName = memberFullName;
+    }
+
+    public int getMemberId() {
+        return memberId=counter;
     }
 
     public String getContact() {

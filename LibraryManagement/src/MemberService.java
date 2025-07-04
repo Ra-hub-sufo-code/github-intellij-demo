@@ -1,25 +1,29 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MemberService {
-    private List<Member> memberList =new ArrayList<>();
+    public static Map<String,Member> memberMap =new HashMap();
     private Member currentMember= null;
 
-    public void registerMember(String memberName,String memberId,String concat){
-        Member member=new Member(memberName,memberId,concat);
-        memberList.add(member);
-        System.out.println("Registration is Successful!");
+    public boolean registerMember(String memberName,String concat,String memberFullName){
+        if (memberMap.containsKey(memberName)){
+            System.out.println("Member Name Already taken,Please Choice another");
+            return false;
+        }
+        Member member=new Member(memberName,concat,memberFullName);
+        memberMap.put(memberName,member);
+        System.out.println("Registration Successful!");
+        return true;
     }
 
-    public boolean loginMember(String memberId) {
-        for (Member member:memberList) {
-            if (!member.getMemberId().equalsIgnoreCase(memberId)) {
-                System.out.println("No Member Found with this Member Id");
-                return false;
-            }
+    public boolean loginMember(String memberName) {
+        if (!memberMap.containsKey(memberName)){
+            System.out.println("No Member Found with this Member Name");
+            return false;
         }
-        currentMember = new Member();
-        System.out.println("Welcome : "+currentMember.getMemberName()+"!");
+        Member member=memberMap.get(memberName);
+        currentMember = member;
+        System.out.println("Welcome : "+currentMember.getMemberFullName()+"!");
         return true;
     }
 

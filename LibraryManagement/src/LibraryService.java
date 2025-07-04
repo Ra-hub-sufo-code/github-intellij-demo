@@ -1,8 +1,11 @@
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.ArrayList;
 
 public class LibraryService {
     private List<Book> bookList =new ArrayList<>();
+    private Map<Member,Integer> memberBookMap =new HashMap<>();
 
     public LibraryService(){
         bookList.add(new Book("Java","Raushan",1001,100));
@@ -23,22 +26,29 @@ public class LibraryService {
         return res;
     }
 
-    public Book borrowBook(String bookTitle, String author , int bookCount) {
-        for (Book book:bookList)
-        {
-            if (book.getBookTitle().equalsIgnoreCase(bookTitle) &&book.getAuthor().equalsIgnoreCase(author))
+    public Book borrowBook(Member member,String memberName,String bookTitle, String author , int bookCount) {
+        if (MemberService.memberMap.containsKey(memberName)) {
+            for (Book book:bookList)
             {
-                if (book.borrowBook(bookCount))
+                if (book.getBookTitle().equalsIgnoreCase(bookTitle) &&book.getAuthor().equalsIgnoreCase(author))
                 {
-                    return book;
-                }
-                else {
-                    System.out.println("No enough Book Available");
-                    return null;
+                    //check
+                    if (book.borrowBook(bookCount))
+                    {
+                        memberBookMap.put(member,bookCount);
+                        System.out.println("Enjoy Book");
+                        return book;
+                    }
+                    else {
+                        System.out.println("No enough Book Available");
+                        return null;
+                    }
                 }
             }
+            System.out.println("This type of BookTitle "+bookTitle+" and Author "+author+" Book is not Available");
+            return null;
         }
-        System.out.println("This type of BookTitle "+bookTitle+" and Author "+author+" Book is not Available");
+        System.out.println("Member not Found!");
         return null;
     }
 
@@ -53,16 +63,24 @@ public class LibraryService {
                 return true;
             }
         }
-        System.out.println("Please give return Right Book");
+        System.out.println("Please return Right Book");
         return false;
     }
 
-    public void listAllBook() {
+    public void listAllBooks() {
         System.out.println("List of All books:");
         for (Book book:bookList) {
             System.out.println(book);
         }
     }
 
+    public void viewMyBooks(Member member) {
+        if (memberBookMap.containsKey(member)){
+            System.out.println("Your all Books:");
+            System.out.println(memberBookMap.get(member));
+            return;
+        }
+        System.out.println("Member not Found");
+    }
 
 }
