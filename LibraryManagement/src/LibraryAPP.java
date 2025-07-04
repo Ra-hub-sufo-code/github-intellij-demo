@@ -39,6 +39,7 @@ public class LibraryAPP {
         System.out.print("Enter member Name: ");
         String memberName =scanner.next();
         System.out.print("Enter Member Full Name:");
+                        scanner.next();
         String memberFullName=scanner.nextLine();
         memberService.registerMember(memberName,contact,memberFullName);
     }
