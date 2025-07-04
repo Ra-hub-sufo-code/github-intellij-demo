@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.ArrayList;
 
 public class LibraryService {
+    private final MemberService memberService=new MemberService();
     private List<Book> bookList =new ArrayList<>();
     private Map<Member,Integer> memberBookMap =new HashMap<>();
 
@@ -57,6 +58,20 @@ public class LibraryService {
         {
             if (book.getBookTitle().equalsIgnoreCase(bookTitle) &&book.getAuthor().equalsIgnoreCase(author))
             {
+                if (book.getTotalBook()==book.getAvailableBook()) {
+                    System.out.println("All Books Already return ");
+                    return false;
+                }
+                /*Member member=memberService.getCurrentMember();
+                Integer count=memberBookMap.get(member);
+                if(bookCount>count){
+                    System.out.println("You return "+bookCount+" Books, you Borrowed "+count+" Books");
+                    bookList.add(book);
+                    book.returnBook(count);
+
+                    System.out.println("Your Book is return successfully,Please leave reviews");
+                    return true;
+                }*/
                 bookList.add(book);
                 book.returnBook(bookCount);
                 System.out.println("Your Book is return successfully,Please leave reviews");

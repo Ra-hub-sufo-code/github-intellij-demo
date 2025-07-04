@@ -17,7 +17,7 @@ public class LibraryAPP {
                 System.out.println("1. Register:");
                 System.out.println("2. Login: ");
                 System.out.println("3. Exit: ");
-                System.out.println("Enter Choice: ");
+                System.out.print("Enter Choice: ");
 
                 int choice=scanner.nextInt();
                 switch (choice){
@@ -36,12 +36,10 @@ public class LibraryAPP {
     public void register() {
         System.out.print("Enter member contact: ");
         String contact =scanner.next();
-        System.out.print("\nEnter member Name: ");
+        System.out.print("Enter member Name: ");
         String memberName =scanner.next();
         System.out.print("Enter Member Full Name:");
-                    scanner.next();
         String memberFullName=scanner.nextLine();
-        Member member=new Member(memberName,contact,memberFullName);
         memberService.registerMember(memberName,contact,memberFullName);
     }
 
@@ -65,7 +63,7 @@ public class LibraryAPP {
             System.out.println("4. View All Books:");
             System.out.println("5. View My Books:");
             System.out.println("6. Logout:");
-            System.out.println("Enter your Choice:");
+            System.out.print("Enter your Choice:");
 
             int choice=scanner.nextInt();
             switch (choice){
@@ -116,7 +114,7 @@ public class LibraryAPP {
         String bookTitle =scanner.next();
         System.out.print("Enter the Book Author: ");
         String bookAuthor=scanner.next();
-        System.out.print("\nEnter Member Name: ");
+        System.out.print("Enter Member Name: ");
         String memberName =scanner.next();
         Member member=memberService.getCurrentMember();
         System.out.println("Enter the numbers of Book Do you want to Borrow: ");
@@ -129,7 +127,7 @@ public class LibraryAPP {
         String bookTitle =scanner.next();
         System.out.print("Enter the Book Author: ");
         String bookAuthor=scanner.next();
-        System.out.println("Enter the numbers of Book Do you want to Borrow: ");
+        System.out.println("Enter the numbers of Book Do you want to Return: ");
         int count = scanner.nextInt();
         libraryService.returnBook(bookTitle,bookAuthor,count);
     }
