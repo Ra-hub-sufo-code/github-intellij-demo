@@ -7,7 +7,7 @@ public class DeletePreparedStatement {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connection= DriverManager.getConnection(
-                    "jdbc:mysql://localHost:3306/student","root","RAU@kr#123$**"
+                    "jdbc:mysql://localhost:3306/student","root","RAU@kr#123$**"
             );
 
             String query="DELETE FROM Person where personId=?";
