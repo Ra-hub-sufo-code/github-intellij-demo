@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c33c1405-a36a-45ee-99ea-978e2c660f6d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../GarageApp/GarageApp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cfs/Motor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cfs/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore-P02/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore-P02/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore-P02/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore-P02/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore-P02/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore-P02/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore-P02/src/main/java/org/cfs/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore-P02/src/main/java/org/cfs/DieselEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore-P02/src/main/java/org/cfs/Engine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore-P02/src/main/java/org/cfs/PetrolEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore-P02/src/main/java/org/cfs/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringCore-P02/src/main/resources/beans.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c33c1405-a36a-45ee-99ea-978e2c660f6d" name="Changes" comment="Spring Core" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,6 +79,19 @@
       <option name="presentableId" value="Default" />
       <updated>1754413974387</updated>
     </task>
+    <task id="LOCAL-00001" summary="Spring Core">
+      <option name="closed" value="true" />
+      <created>1754415118558</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1754415118558</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Spring Core" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring Core" />
   </component>
 </project>
