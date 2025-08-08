@@ -46,4 +46,17 @@ public class TrackerController {
         tasks.remove(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/dueBefore")
+    public ResponseEntity<List <Tracker>> dueBefore(){
+        List<Tracker> trackerList=new ArrayList<>();
+        for (Tracker value:tasks.values()){
+            int dueBefore=value.getDueDate().compareTo("2025-12-31");
+            if (dueBefore <= 0){
+                trackerList.add(value);
+            }
+        }
+
+        return ResponseEntity.ok(trackerList);
+    }
 }
