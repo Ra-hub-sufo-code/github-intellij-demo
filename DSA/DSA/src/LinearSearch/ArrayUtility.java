@@ -17,4 +17,9 @@ public class ArrayUtility {
         return arr;
     }
 
+    public static void printArray(int[] arr){
+        for (int ele:arr){
+            System.out.print(ele+" ");
+        }
+    }
 }
